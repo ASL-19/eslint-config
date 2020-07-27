@@ -66,6 +66,7 @@ const eslintConfig = {
       },
     ],
     "sort-destructure-keys/sort-destructure-keys": "warn",
+    "tsdoc/syntax": "warn",
   },
   settings: {
     // "import/ignore": ["!url-loader!"],
