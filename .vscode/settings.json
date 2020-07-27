@@ -9,9 +9,10 @@
   ],
   "cSpell.words": [
     "Heaslip",
-    "destructure",
     "Immer",
-    "rushstack"
+    "destructure",
+    "rushstack",
+    "tsdoc"
   ],
   "markdown.extension.toc.levels": "2..6",
   "search.exclude": {
