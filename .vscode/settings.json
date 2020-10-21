@@ -11,6 +11,7 @@
     "Heaslip",
     "Immer",
     "destructure",
+    "mixins",
     "rushstack",
     "tsdoc"
   ],

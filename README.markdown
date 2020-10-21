@@ -6,7 +6,6 @@ This config replaces [@asl-19/eslint-config-typescript] and [@asl-19/eslint-conf
 
 [@asl-19/eslint-config-typescript]: https://github.com/ASL-19/eslint-config-typescript
 [@asl-19/eslint-config-typescript-react]: https://github.com/ASL-19/eslint-config-typescript-react
-[@rushstack/eslint-patch]: https://github.com/microsoft/rushstack/tree/master/stack/eslint-patch
 
 - [How to use](#how-to-use)
     - [Install](#install)
