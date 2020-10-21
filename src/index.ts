@@ -1,11 +1,23 @@
+import { defaultOrder } from "@typescript-eslint/eslint-plugin/dist/rules/member-ordering";
+
 const eslintConfig = {
   extends: [
-    "@rushstack/eslint-config",
+    "@rushstack/eslint-config/profile/web-app",
+    "@rushstack/eslint-config/mixins/friendly-locals",
+    "@rushstack/eslint-config/mixins/tsdoc",
     "plugin:functional/external-recommended",
     "plugin:functional/lite",
     "plugin:import/recommended",
     "plugin:import/typescript",
     "plugin:prettier/recommended",
+  ],
+  overrides: [
+    {
+      files: ["**/*.test.ts", "**/*.test.tsx", "jest.setup.js"],
+      env: {
+        jest: true,
+      },
+    },
   ],
   parserOptions: { ecmaVersion: 2019, sourceType: "module" },
   plugins: [
@@ -15,16 +27,9 @@ const eslintConfig = {
     "sort-destructure-keys",
   ],
   rules: {
-    "@rushstack/no-null": "off",
-    "@typescript-eslint/array-type": "off",
-    "@typescript-eslint/explicit-function-return-type": "off",
-    "@typescript-eslint/explicit-member-accessibility": "off",
-    "@typescript-eslint/naming-convention": "off",
-    "@typescript-eslint/no-floating-promises": "off",
-    "@typescript-eslint/no-namespace": "off",
-    "@typescript-eslint/no-unused-vars": "warn",
-    "@typescript-eslint/typedef": "off",
-
+    // ----------------------
+    // --- Built-in rules ---
+    // ----------------------
     "no-param-reassign": [
       "error",
       {
@@ -42,15 +47,67 @@ const eslintConfig = {
       },
     ],
 
+    // --------------------------------
+    // --- @rushstack/eslint-plugin ---
+    // --------------------------------
+    "@rushstack/no-null": "off",
+    "@rushstack/no-new-null": "off",
+
+    // ---------------------------------------
+    // --- @typescript-eslint/eslint-plugin ---
+    // ----------------------------------------
+    "@typescript-eslint/array-type": "off",
+    "@typescript-eslint/consistent-type-definitions": ["warn", "type"],
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/explicit-member-accessibility": "off",
+    "@typescript-eslint/member-ordering": [
+      "warn",
+      { default: { memberTypes: defaultOrder, order: "alphabetically" } },
+    ],
+    "@typescript-eslint/naming-convention": "off",
+    "@typescript-eslint/no-floating-promises": "off",
+    "@typescript-eslint/no-namespace": "off",
+    "@typescript-eslint/no-unused-vars": ["warn", { argsIgnorePattern: "^_" }],
+    "@typescript-eslint/typedef": "off",
+
+    // --------------------------------
+    // --- eslint-plugin-functional ---
+    // --------------------------------
+    "functional/immutable-data": [
+      "error",
+      {
+        ignorePattern: [
+          ".current",
+          ".getInitialProps",
+          ".Layout",
+          "draft",
+          "module.exports",
+          "res",
+        ],
+      },
+    ],
     "functional/prefer-readonly-type": "off",
     "functional/prefer-type-literal": "off",
+    "functional/no-return-void": "off",
+
+    // ----------------------------
+    // --- eslint-plugin-import ---
+    // ----------------------------
     "import/no-unresolved": [
       "warn",
       {
         ignore: ["!url-loader!"],
       },
     ],
+
+    // ------------------------------
+    // --- eslint-plugin-prettier ---
+    // ------------------------------
     "prettier/prettier": "warn",
+
+    // ----------------------------------------
+    // --- eslint-plugin-simple-import-sort ---
+    // ----------------------------------------
     "simple-import-sort/sort": [
       "warn",
       {
@@ -65,11 +122,13 @@ const eslintConfig = {
         ],
       },
     ],
+
+    // -------------------------------------------
+    // --- eslint-plugin-sort-destructure-keys ---
+    // -------------------------------------------
     "sort-destructure-keys/sort-destructure-keys": "warn",
-    "tsdoc/syntax": "warn",
   },
   settings: {
-    // "import/ignore": ["!url-loader!"],
     "import/resolver": {
       typescript: {},
     },
