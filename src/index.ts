@@ -108,7 +108,7 @@ const eslintConfig = {
     // ----------------------------------------
     // --- eslint-plugin-simple-import-sort ---
     // ----------------------------------------
-    "simple-import-sort/sort": [
+    "simple-import-sort/imports": [
       "warn",
       {
         groups: [
