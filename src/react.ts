@@ -3,7 +3,6 @@ const eslintConfigReact = {
     "@rushstack/eslint-config/mixins/react",
     "plugin:jsx-a11y/strict",
     "plugin:react-hooks/recommended",
-    "prettier/react",
   ],
   plugins: ["@emotion"],
   rules: {

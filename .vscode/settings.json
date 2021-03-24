@@ -22,5 +22,6 @@
     "CHANGELOG.markdown": true,
     "LICENSE": true,
     "yarn.lock": true
-  }
+  },
+  "typescript.tsdk": "node_modules/typescript/lib"
 }
