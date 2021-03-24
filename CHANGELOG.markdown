@@ -1,5 +1,13 @@
 # @asl-19/eslint-config changelog
 
+## [0.4.0](https://github.com/ASL-19/eslint-config/pulls?q=is%3Apr+milestone%3A0.4.0) [2021-03-24]
+
+### Changes
+
+* Upgrade dependencies [[#6](https://github.com/ASL-19/eslint-config/pull/6)]
+    * `eslint`, `prettier`, and `typescript` peer dependencies changed to most recent releases
+    * No new rules added, but some minor warnings may be triggered by dependency rule tweaks
+
 ## [0.3.0](https://github.com/ASL-19/eslint-config/pulls?q=is%3Apr+milestone%3A0.3.0) [2020-10-21]
 
 ### Changes
