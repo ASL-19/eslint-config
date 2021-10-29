@@ -4,8 +4,7 @@
   },
   "eslint.enable": true,
   "eslint.validate": [
-    "javascript",
-    "typescript"
+    "javascript"
   ],
   "cSpell.words": [
     "Heaslip",
@@ -20,6 +19,5 @@
     "CHANGELOG.markdown": true,
     "LICENSE": true,
     "package-lock.json": true
-  },
-  "typescript.tsdk": "node_modules/typescript/lib"
+  }
 }

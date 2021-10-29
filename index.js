@@ -1,4 +1,6 @@
-import { defaultOrder } from "@typescript-eslint/eslint-plugin/dist/rules/member-ordering";
+const {
+  defaultOrder,
+} = require("@typescript-eslint/eslint-plugin/dist/rules/member-ordering");
 
 const eslintConfig = {
   extends: [
@@ -135,4 +137,4 @@ const eslintConfig = {
   },
 };
 
-export = eslintConfig;
+module.exports = eslintConfig;
