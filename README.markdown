@@ -19,7 +19,7 @@ This config replaces [@asl-19/eslint-config-typescript] and [@asl-19/eslint-conf
 ### Install
 
 ```sh
-yarn add @asl-19/eslint-config --dev
+npm install @asl-19/eslint-config --save-dev
 ```
 
 ### Add to ESLint config
