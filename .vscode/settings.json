@@ -17,11 +17,9 @@
   ],
   "markdown.extension.toc.levels": "2..6",
   "search.exclude": {
-    ".yarn/releases/**/*": true,
-    ".yarnrc": true,
     "CHANGELOG.markdown": true,
     "LICENSE": true,
-    "yarn.lock": true
+    "package-lock.json": true
   },
   "typescript.tsdk": "node_modules/typescript/lib"
 }
