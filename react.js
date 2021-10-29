@@ -38,4 +38,4 @@ const eslintConfigReact = {
   },
 };
 
-export = eslintConfigReact;
+module.exports = eslintConfigReact;
