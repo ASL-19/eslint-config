@@ -19,7 +19,7 @@ This config replaces [@asl-19/eslint-config-typescript] and [@asl-19/eslint-conf
 ### Install
 
 ```sh
-yarn add @asl-19/eslint-config --dev
+npm install @asl-19/eslint-config --save-dev
 ```
 
 ### Add to ESLint config
@@ -57,4 +57,4 @@ module.exports = {
 
 ## Compatibility
 
-This package is developed and used with Node.js 12 (the active LTS [release](https://nodejs.org/en/about/releases/) as of 2020-07). The code should be forward-compatible, but use with newer Node.js versions is untested and unsupported.
+This package is developed with Node.js 16 (the active LTS [release](https://nodejs.org/en/about/releases/) as of 2021-10-29). The code should be forward-compatible, but use with newer Node.js versions is untested and unsupported.

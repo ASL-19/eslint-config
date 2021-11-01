@@ -4,24 +4,21 @@
   },
   "eslint.enable": true,
   "eslint.validate": [
-    "javascript",
-    "typescript"
+    "javascript"
   ],
   "cSpell.words": [
+    "destructure",
     "Heaslip",
     "Immer",
-    "destructure",
     "mixins",
+    "mizdra",
     "rushstack",
     "tsdoc"
   ],
   "markdown.extension.toc.levels": "2..6",
   "search.exclude": {
-    ".yarn/releases/**/*": true,
-    ".yarnrc": true,
     "CHANGELOG.markdown": true,
     "LICENSE": true,
-    "yarn.lock": true
-  },
-  "typescript.tsdk": "node_modules/typescript/lib"
+    "package-lock.json": true
+  }
 }
