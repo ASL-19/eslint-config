@@ -32,6 +32,10 @@ const eslintConfig = {
     // ----------------------
     // --- Built-in rules ---
     // ----------------------
+    "no-console": [
+      "error",
+      { allow: ["error", "group", "groupEnd", "info", "table", "warn"] },
+    ],
     "no-param-reassign": [
       "error",
       {
@@ -91,6 +95,7 @@ const eslintConfig = {
     "functional/prefer-readonly-type": "off",
     "functional/prefer-type-literal": "off",
     "functional/no-return-void": "off",
+    "functional/no-throw-statement": "off",
 
     // ----------------------------
     // --- eslint-plugin-import ---

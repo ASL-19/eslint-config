@@ -4,13 +4,17 @@ const eslintConfigReact = {
     "plugin:jsx-a11y/strict",
     "plugin:react-hooks/recommended",
   ],
-  plugins: ["@emotion"],
+  plugins: ["@emotion", "@mizdra/layout-shift"],
   rules: {
     // ------------------------------
     // --- @emotion/eslint-plugin ---
     // ------------------------------
-    "@emotion/jsx-import": "error",
     "@emotion/syntax-preference": ["error", "string"],
+
+    // ----------------------------
+    // --- @mizdra/layout-shift ---
+    // ----------------------------
+    "@mizdra/layout-shift/require-size-attributes": "error",
 
     // ------------------------------
     // --- eslint-plugin-jsx-a11y ---
@@ -26,6 +30,8 @@ const eslintConfigReact = {
     ],
     // Deprecated and redundant due to jsx-a11y/label-has-associated-control
     "jsx-a11y/label-has-for": "off",
+    // Deprecated
+    "jsx-a11y/no-onchange": "off",
 
     // ---------------------------
     // --- eslint-plugin-react ---
@@ -34,6 +40,7 @@ const eslintConfigReact = {
     "react/jsx-one-expression-per-line": "off",
     "react/jsx-props-no-spreading": "off",
     "react/prop-types": "off",
+    "react/no-unknown-property": "error",
     "react/react-in-jsx-scope": "off",
   },
 };
