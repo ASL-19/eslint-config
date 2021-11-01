@@ -7,10 +7,11 @@
     "javascript"
   ],
   "cSpell.words": [
+    "destructure",
     "Heaslip",
     "Immer",
-    "destructure",
     "mixins",
+    "mizdra",
     "rushstack",
     "tsdoc"
   ],
