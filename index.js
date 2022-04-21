@@ -75,6 +75,7 @@ const eslintConfig = {
     "@typescript-eslint/no-floating-promises": "off",
     "@typescript-eslint/no-namespace": "off",
     "@typescript-eslint/no-unused-vars": ["warn", { argsIgnorePattern: "^_" }],
+    "@typescript-eslint/prefer-readonly-parameter-types": "off",
     "@typescript-eslint/typedef": "off",
 
     // --------------------------------
