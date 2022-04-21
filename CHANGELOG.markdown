@@ -1,5 +1,14 @@
 # @asl-19/eslint-config changelog
 
+## [0.6.0](https://github.com/ASL-19/eslint-config/pulls?q=is%3Apr+milestone%3A0.6.0) [2022-04-21]
+
+### Changes
+
+* Raised ESLint peer dependency "^8.13.0" [**Breaking**]
+    * The previous ESLint dependency was 7
+* Raised Prettier peer dependency to "^2.6.2". [**Breaking**]
+* Upgraded other ESLint plugin/config dependencies (may result in new warnings/errors)
+
 ## [0.5.0](https://github.com/ASL-19/eslint-config/pulls?q=is%3Apr+milestone%3A0.5.0) [2021-11-01]
 
 ### Changes
