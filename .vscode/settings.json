@@ -13,12 +13,19 @@
     "mixins",
     "mizdra",
     "rushstack",
-    "tsdoc"
+    "tsdoc",
+    "usememo"
   ],
+  "js/ts.implicitProjectConfig.checkJs": true,
   "markdown.extension.toc.levels": "2..6",
   "search.exclude": {
     "CHANGELOG.markdown": true,
     "LICENSE": true,
     "package-lock.json": true
+  },
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "[javascript][json][jsonc][markdown][yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
   }
 }
