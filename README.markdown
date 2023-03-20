@@ -8,10 +8,10 @@ This config replaces [@asl-19/eslint-config-typescript] and [@asl-19/eslint-conf
 [@asl-19/eslint-config-typescript-react]: https://github.com/ASL-19/eslint-config-typescript-react
 
 - [How to use](#how-to-use)
-    - [Install](#install)
-    - [Add to ESLint config](#add-to-eslint-config)
-        - [For TypeScript projects:](#for-typescript-projects)
-        - [For TypeScript + React projects:](#for-typescript--react-projects)
+  - [Install](#install)
+  - [Add to ESLint config](#add-to-eslint-config)
+    - [For TypeScript projects:](#for-typescript-projects)
+    - [For TypeScript + React projects:](#for-typescript--react-projects)
 - [Compatibility](#compatibility)
 
 ## How to use
@@ -33,9 +33,7 @@ Create a `.eslintrc.js` containing (at least) the following:
 require("@rushstack/eslint-patch/modern-module-resolution");
 
 module.exports = {
-  extends: [
-    "@asl-19/eslint-config"
-  ],
+  extends: ["@asl-19/eslint-config", "@asl-19/eslint-config/typescript"],
 };
 ```
 
@@ -50,11 +48,13 @@ require("@rushstack/eslint-patch/modern-module-resolution");
 module.exports = {
   extends: [
     "@asl-19/eslint-config",
-    "@asl-19/eslint-config/react"
+    "@asl-19/eslint-config/next", // For Next.js projects
+    "@asl-19/eslint-config/react",
+    "@asl-19/eslint-config/typescript",
   ],
 };
 ```
 
 ## Compatibility
 
-This package is developed with Node.js 16 (the active LTS [release](https://nodejs.org/en/about/releases/) as of 2021-10-29). The code should be forward-compatible, but use with newer Node.js versions is untested and unsupported.
+This package is developed with Node.js 18 (the active LTS [release](https://nodejs.org/en/about/releases/) as of 2023-03-20). The code should be forward-compatible, but use with newer Node.js versions is untested and unsupported.
