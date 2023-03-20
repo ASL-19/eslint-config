@@ -1,5 +1,14 @@
 # @asl-19/eslint-config changelog
 
+## 0.7.0 [2023-03-20]
+
+Big overhaul/update:
+
+- Remove `eslint-plugin-functional` (we had to disable too much of it, and weren’t getting value from the remaining rules)
+- Replace `@rushstack/eslint-config` and replace some of its configs with standard config recommended sets
+- Remove `eslint-plugin-prettier` (we will use Prettier directly in projects now)
+- Update dependencies, bring in some common project configs, etc.
+
 ## [0.6.0](https://github.com/ASL-19/eslint-config/pulls?q=is%3Apr+milestone%3A0.6.0) [2022-04-21]
 
 ### Changes
