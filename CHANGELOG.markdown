@@ -1,5 +1,11 @@
 # @asl-19/eslint-config changelog
 
+## 0.7.1 [2023-03-21]
+
+### Fixes
+
+- Added missing `eslint-plugin-react-memo` dependency
+
 ## 0.7.0 [2023-03-20]
 
 Big overhaul/update:
