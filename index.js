@@ -1,24 +1,15 @@
 /** @type {import("eslint").ESLint.ConfigData} */
 const eslintConfig = {
   env: {
+    es2022: true,
     node: true,
   },
-  extends: [
-    "eslint:recommended",
-    "plugin:import/recommended",
-    "eslint-config-prettier",
-  ],
+  extends: ["eslint:recommended", "eslint-config-prettier"],
   globals: {
     globalThis: "writable",
   },
-  plugins: ["import", "simple-import-sort", "sort-destructure-keys"],
+  plugins: ["simple-import-sort", "sort-destructure-keys"],
   rules: {
-    "import/no-unresolved": [
-      "warn",
-      {
-        ignore: ["!url-loader!"],
-      },
-    ],
     "no-console": [
       "error",
       { allow: ["error", "group", "groupEnd", "info", "table", "warn"] },

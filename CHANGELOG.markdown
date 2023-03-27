@@ -1,5 +1,15 @@
 # @asl-19/eslint-config changelog
 
+## 0.8.0 [2023-03-27]
+
+### Changes
+
+- Removed [`eslint-plugin-import`](https://github.com/import-js/eslint-plugin-import)
+
+  Didn’t often catch issues `tsc` didn’t already catch, and had large performance cost.
+
+- Updated dependencies
+
 ## 0.7.1 [2023-03-21]
 
 ### Fixes
