@@ -1,6 +1,6 @@
 {
   "name": "@asl-19/eslint-config",
-  "version": "0.7.1",
+  "version": "0.8.0",
   "description": "Shared ESLint config for ASL19 projects",
   "author": {
     "name": "Grant Heaslip",
