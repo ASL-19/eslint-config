@@ -1,9 +1,6 @@
 /** @type {import("eslint").ESLint.ConfigData} */
 const eslintConfigTypeScript = {
-  extends: [
-    "plugin:@typescript-eslint/recommended",
-    "plugin:import/typescript",
-  ],
+  extends: ["plugin:@typescript-eslint/recommended"],
   parser: "@typescript-eslint/parser",
   parserOptions: {
     project: true,
@@ -51,11 +48,6 @@ const eslintConfigTypeScript = {
     ],
     "@typescript-eslint/no-unused-vars": ["warn", { argsIgnorePattern: "^_" }],
     "@typescript-eslint/no-var-requires": "off",
-  },
-  settings: {
-    "import/resolver": {
-      typescript: {},
-    },
   },
 };
 
