@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "checkJs": true,
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "exactOptionalPropertyTypes": true,
+    "esModuleInterop": true,
+    "jsx": "react",
+    "moduleResolution": "Node16",
+    "module": "Node16",
+    "noImplicitAny": false,
+    "outDir": "types",
+    "strict": true,
+    "target": "ES2019"
+  },
+  "include": [
+    "configs/*.js",
+    "index.js"
+  ]
+}
