@@ -1,5 +1,21 @@
 # @asl-19/eslint-config changelog
 
+### 0.9.0 [2025-03-20]
+
+- Adopt latest ESLint recommended rules
+
+- Replace `eslint-plugin-simple-import-sort`, `eslint-plugin-sort-destructure-keys`, and `@typescript-eslint` ordering rules with `eslint-plugin-perfectionist`
+
+- Replace unmaintained `eslint-plugin-react-memo` with maintained (and more powerful) `@arthurgeron/eslint-plugin-react-usememo`
+
+- Remove obsolete `@rushstack/eslint-patch`
+
+- Add `eslint-plugin-security`
+
+- Add single export (`index.js` is now the barrel file; the rules previously in `index.js` are now in `asl19.base`)
+
+- Project is now a pure ES module (won’t work with older versions of Node, but all consuming projects should be using Node 22+)
+
 ## 0.8.0 [2023-03-27]
 
 ### Changes
