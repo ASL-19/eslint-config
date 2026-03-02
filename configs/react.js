@@ -1,4 +1,4 @@
-import arthurgeronReactUsememo from "@arthurgeron/eslint-plugin-react-usememo";
+import * as arthurgeronReactUsememo from "@arthurgeron/eslint-plugin-react-usememo";
 import { fixupPluginRules } from "@eslint/compat";
 import jsxA11y from "eslint-plugin-jsx-a11y";
 import react from "eslint-plugin-react";

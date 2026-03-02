@@ -4,10 +4,11 @@ import { defineConfig } from "eslint/config";
 const nextConfig = defineConfig([
   {
     plugins: {
+      // @ts-expect-error
       "@next/next": next,
     },
+    // @ts-expect-error
     rules: {
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
       ...next.configs.recommended.rules,
       "@next/next/no-html-link-for-pages": "off",
       "@next/next/no-img-element": "off",
