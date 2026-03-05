@@ -12,7 +12,7 @@ const reactConfig = defineConfig({
     jsxA11y.flatConfigs.recommended,
     react.configs.flat.recommended,
     react.configs.flat["jsx-runtime"],
-    reactHooks.configs["recommended-latest"],
+    reactHooks.configs.flat["recommended-latest"],
   ],
   languageOptions: {
     globals: {
