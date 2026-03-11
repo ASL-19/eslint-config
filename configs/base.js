@@ -70,23 +70,25 @@ const baseConfig = defineConfig([
       "perfectionist/sort-imports": [
         "warn",
         {
-          customGroups: {
-            value: {
-              static: ["^src/static/.*"],
+          customGroups: [
+            {
+              elementNamePattern: ["^src/static/.*"],
+              groupName: "value-internal-static",
             },
-          },
+          ],
+          // https://perfectionist.dev/rules/sort-imports#groups
           groups: [
-            "type",
-            ["builtin", "external"],
-            "internal-type",
-            "static",
-            "internal",
-            ["parent-type", "sibling-type", "index-type"],
-            ["parent", "sibling", "index"],
-            "object",
+            "type-import",
+            ["value-builtin", "value-external"],
+            "type-internal",
+            "value-internal-static",
+            "value-internal",
+            "ts-equals-import",
             "unknown",
           ],
-          tsconfigRootDir: ".",
+          tsconfig: {
+            rootDir: ".",
+          },
           type: "natural",
         },
       ],
