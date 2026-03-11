@@ -1,5 +1,9 @@
 # @asl-19/eslint-config changelog
 
+### 0.10.0 [2026-03-11]
+
+- Update dependencies [[#23](https://github.com/ASL-19/eslint-config/pull/23)]
+
 ### 0.9.0 [2025-03-20]
 
 - Adopt latest ESLint recommended rules

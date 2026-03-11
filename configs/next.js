@@ -7,7 +7,6 @@ const nextConfig = defineConfig([
       "@next/next": next,
     },
     rules: {
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
       ...next.configs.recommended.rules,
       "@next/next/no-html-link-for-pages": "off",
       "@next/next/no-img-element": "off",

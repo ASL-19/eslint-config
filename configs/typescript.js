@@ -8,9 +8,7 @@ const typescriptConfig = defineConfig(
       // the cause of this type incompatibility. See
       // https://github.com/typescript-eslint/typescript-eslint/issues/10856
 
-      // @ts-expect-error (works for now)
       typescriptEslint.configs.recommendedTypeChecked,
-      // @ts-expect-error (works for now)
       typescriptEslint.configs.stylisticTypeChecked,
     ],
     languageOptions: {

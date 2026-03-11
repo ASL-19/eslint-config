@@ -1,5 +1,4 @@
-import arthurgeronReactUsememo from "@arthurgeron/eslint-plugin-react-usememo";
-import { fixupPluginRules } from "@eslint/compat";
+import { flatConfig as arthurgeronReactUsememo } from "@arthurgeron/eslint-plugin-react-usememo";
 import jsxA11y from "eslint-plugin-jsx-a11y";
 import react from "eslint-plugin-react";
 import reactHooks from "eslint-plugin-react-hooks";
@@ -12,7 +11,7 @@ const reactConfig = defineConfig({
     jsxA11y.flatConfigs.recommended,
     react.configs.flat.recommended,
     react.configs.flat["jsx-runtime"],
-    reactHooks.configs["recommended-latest"],
+    reactHooks.configs.flat["recommended-latest"],
   ],
   languageOptions: {
     globals: {
@@ -20,8 +19,7 @@ const reactConfig = defineConfig({
     },
   },
   plugins: {
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
-    "@arthurgeron/react-usememo": fixupPluginRules(arthurgeronReactUsememo),
+    "@arthurgeron/react-usememo": arthurgeronReactUsememo,
   },
   rules: {
     // https://github.com/arthurgeron/eslint-plugin-react-usememo/blob/main/docs/rules/require-usememo.md
