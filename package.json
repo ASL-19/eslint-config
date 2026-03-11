@@ -60,9 +60,5 @@
   },
   "peerDependencies": {
     "eslint": "^9.33.0"
-  },
-  "overrides": {
-    "minimatch": "^10.2.3",
-    "rollup": "^4.59.0"
   }
 }
