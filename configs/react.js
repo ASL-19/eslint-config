@@ -1,4 +1,3 @@
-import { flatConfig as arthurgeronReactUsememo } from "@arthurgeron/eslint-plugin-react-usememo";
 import jsxA11y from "eslint-plugin-jsx-a11y";
 import react from "eslint-plugin-react";
 import reactHooks from "eslint-plugin-react-hooks";
@@ -18,21 +17,7 @@ const reactConfig = defineConfig({
       ...globals.browser,
     },
   },
-  plugins: {
-    "@arthurgeron/react-usememo": arthurgeronReactUsememo,
-  },
   rules: {
-    // https://github.com/arthurgeron/eslint-plugin-react-usememo/blob/main/docs/rules/require-usememo.md
-    "@arthurgeron/react-usememo/require-usememo": [
-      "warn",
-      {
-        // checkHooksCalls goes beyond what eslint-plugin-react-memo checked
-        // (component props). It would be very invasive since many hooks accept
-        // object arguments, and considering React Compiler is coming it‘s not
-        // worth the trouble now
-        checkHookCalls: false,
-      },
-    ],
     "jsx-a11y/click-events-have-key-events": "off",
     // https://github.com/jsx-eslint/eslint-plugin-react/issues/1848
     "react/no-unknown-property": ["error", { ignore: ["css"] }],

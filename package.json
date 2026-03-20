@@ -35,7 +35,6 @@
     "tsc-check": "tsc --noEmit"
   },
   "dependencies": {
-    "@arthurgeron/eslint-plugin-react-usememo": "^3.0.0",
     "@eslint/compat": "^2.0.3",
     "@eslint/js": "^9.39.3",
     "@next/eslint-plugin-next": "^16.1.6",
