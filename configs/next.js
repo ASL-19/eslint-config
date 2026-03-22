@@ -12,18 +12,6 @@ const nextConfig = defineConfig([
       "@next/next/no-img-element": "off",
     },
   },
-  {
-    files: ["src/components/**/*"],
-    rules: {
-      "@arthurgeron/react-usememo/require-memo": "warn",
-      "react/display-name": [
-        "warn",
-        {
-          ignoreTranspilerName: true,
-        },
-      ],
-    },
-  },
 ]);
 
 export default nextConfig;
