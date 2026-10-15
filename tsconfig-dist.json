@@ -1,0 +1,10 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "emitDeclarationOnly": true
+  },
+  "include": [
+    "configs/**/*.js",
+    "index.js"
+  ]
+}

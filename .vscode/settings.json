@@ -1,13 +1,12 @@
 {
   "cSpell.words": [
-    "arthurgeron",
     "destructure",
+    "EBADDEVENGINES",
     "Heaslip",
     "Immer",
-    "mizdra",
-    "rushstack",
+    "pinact",
+    "publint",
     "tsdoc",
-    "usememo",
     "yalc"
   ],
   "editor.codeActionsOnSave": {
@@ -15,23 +14,21 @@
   },
   "eslint.enable": true,
   "eslint.validate": [
-    "javascript"
+    "javascript",
+    "typescript"
   ],
-  "files.exclude": {
-    "dist": true
-  },
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true,
-  "js/ts.implicitProjectConfig.checkJs": true,
   "markdown.extension.toc.levels": "2..6",
   "search.exclude": {
     "LICENSE": true,
-    "package-lock.json": true
+    "package-lock.json": true,
+    "types/**/*": true
   },
   "js/ts.tsdk.path": "node_modules/typescript/lib",
   "js/ts.tsdk.promptToUseWorkspaceVersion": true,
-  "[github-actions-workflow][javascript][json][jsonc][markdown][yaml]": {
+  "[github-actions-workflow][javascript][json][jsonc][markdown][typescript][yaml]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true
   }
