@@ -41,7 +41,7 @@
     "dev-lint-test": "npm install --no-audit && npm run lint-test",
     "eslint-check": "eslint .",
     "eslint-fix": "eslint . --fix",
-    "lint-test": "run-p -l tsc-check eslint-check prettier-check vitest-check publint-check",
+    "lint-test": "run-p -l tsc-check eslint-check prettier-check vitest-check publint-check attw-check",
     "mise-outdated": "mise outdated --local",
     "npm-outdated": "npm outdated || true",
     "outdated": "run-s -c -l mise-outdated npm-outdated pinact-outdated",
@@ -53,7 +53,8 @@
     "publint-check": "publint",
     "test": "vitest",
     "tsc-check": "tsc --noEmit",
-    "vitest-check": "vitest run"
+    "vitest-check": "vitest run",
+    "attw-check": "attw --pack . --profile esm-only"
   },
   "dependencies": {
     "@eslint-react/eslint-plugin": "^5.26.5",
@@ -68,6 +69,7 @@
     "typescript-eslint": "^8.71.2"
   },
   "devDependencies": {
+    "@arethetypeswrong/cli": "^0.18.5",
     "@types/node": "^24.19.2",
     "eslint": "^10.12.0",
     "npm-run-all2": "^9.0.3",

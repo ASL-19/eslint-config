@@ -1,5 +1,10 @@
 # @asl-19/eslint-config changelog
 
+### Unreleased
+
+- Development tooling:
+  - Add Are the Types Wrong? (`attw`) to `lint-test`, to check the generated type declarations resolve
+
 ### 1.0.0 [2026-10-15]
 
 - **Breaking:** Require ESLint 10 (`eslint` peer dependency is now `^10.12.0`)

@@ -5,7 +5,7 @@ Shared ESLint flat config for ASL19 projects, published to npm as an ESM-only Ja
 ## Commands
 
 ```sh
-npm run dev-lint-test    # npm install, then type check, ESLint, Prettier, Vitest, publint
+npm run dev-lint-test    # npm install, then type check, ESLint, Prettier, Vitest, publint, attw
 npm run build-lint-test  # build types/, then the same checks (what CI and prepublishOnly run)
 npm run outdated         # report Node, npm package and GitHub Actions updates
 ```
