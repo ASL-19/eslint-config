@@ -1,6 +1,6 @@
 # @asl-19/eslint-config changelog
 
-### Unreleased
+### 1.0.0 [2026-10-15]
 
 - **Breaking:** Require ESLint 10 (`eslint` peer dependency is now `^10.12.0`)
 - **Breaking:** In the `react` config, replace [`eslint-plugin-react`](https://github.com/jsx-eslint/eslint-plugin-react) and [`eslint-plugin-jsx-a11y`](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y) (neither supports ESLint 10) with [`@eslint-react/eslint-plugin`](https://eslint-react.xyz/) and [`eslint-plugin-jsx-a11y-x`](https://github.com/eslint-community/eslint-plugin-jsx-a11y-x)
