@@ -1,5 +1,27 @@
 # @asl-19/eslint-config changelog
 
+### Unreleased
+
+- **Breaking:** Require ESLint 10 (`eslint` peer dependency is now `^10.12.0`)
+- **Breaking:** In the `react` config, replace [`eslint-plugin-react`](https://github.com/jsx-eslint/eslint-plugin-react) and [`eslint-plugin-jsx-a11y`](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y) (neither supports ESLint 10) with [`@eslint-react/eslint-plugin`](https://eslint-react.xyz/) and [`eslint-plugin-jsx-a11y-x`](https://github.com/eslint-community/eslint-plugin-jsx-a11y-x)
+  - Rename `jsx-a11y/` rules to `jsx-a11y-x/` in `eslint-disable` comments and config overrides
+  - `react/` rules have different names and coverage in `@eslint-react/` (see [Migrating from eslint-plugin-react](https://eslint-react.xyz/docs/migrating-from-eslint-plugin-react)); `@eslint-react` rules that duplicate `eslint-plugin-react-hooks` rules are turned off
+  - Uses `@eslint-react`’s `strict-type-checked` preset, so the `react` config now requires type information (use it with the `typescript` config)
+- **Breaking:** In the `typescript` config, use typescript-eslint’s [`strictTypeChecked`](https://typescript-eslint.io/users/configs#strict-type-checked) instead of `recommendedTypeChecked` (requires `strictNullChecks`), with two adjustments:
+  - `no-confusing-void-expression` allows arrow function shorthand (e.g. `(e) => setValue(e.target.value)`)
+  - `restrict-template-expressions` allows numbers
+- Updated dependencies
+- Development tooling:
+  - Add Vitest tests that lint fixtures with each config, and a test that each npm supply-chain gate is set
+  - Generate `types/` at build time instead of committing it
+  - Replace npm-run-all with npm-run-all2, remove npm-check-updates, and add `outdated` scripts
+  - Add publint to `lint-test`
+  - Manage Node.js 24 and pinact with mise
+  - Add npm supply-chain gates (`.npmrc`, `devEngines`, `allowScripts`)
+  - Update TypeScript to 6.0 and Prettier to 3.9, and type check with `module: "nodenext"`
+  - Pin GitHub Actions to commit SHAs, limit the workflow token to read-only, and run CI on pull requests
+  - Add agent instructions (`AGENTS.md`) and Claude Code permission settings
+
 ### 0.11.0 [2026-03-22]
 
 - Removed [`@arthurgeron/eslint-plugin-react-usememo`](https://github.com/arthurgeron/eslint-plugin-react-usememo) (mostly obsolete with React Compiler)

@@ -23,39 +23,63 @@
     "types/**/*.d.ts",
     "index.js"
   ],
+  "devEngines": {
+    "packageManager": {
+      "name": "npm",
+      "version": ">=11.17.0",
+      "onFail": "error"
+    },
+    "runtime": {
+      "name": "node",
+      "version": "24.x",
+      "onFail": "error"
+    }
+  },
   "scripts": {
-    "eslint-check": "eslint . --ext='js,ts,tsx'",
-    "eslint-fix": "eslint . --ext='js,ts,tsx' --fix",
-    "lint": "run-p -l eslint-check prettier-check tsc-check",
-    "prepack": "run-s tsc",
+    "build": "rm -rf types && tsc --project tsconfig-dist.json",
+    "build-lint-test": "run-s build lint-test",
+    "dev-lint-test": "npm install --no-audit && npm run lint-test",
+    "eslint-check": "eslint .",
+    "eslint-fix": "eslint . --fix",
+    "lint-test": "run-p -l tsc-check eslint-check prettier-check vitest-check publint-check",
+    "mise-outdated": "mise outdated --local",
+    "npm-outdated": "npm outdated || true",
+    "outdated": "run-s -c -l mise-outdated npm-outdated pinact-outdated",
+    "pinact-outdated": "pinact run --update --check --min-age 7 || true",
+    "pinact-update": "pinact run --update --min-age 7",
+    "prepublishOnly": "npm run build-lint-test",
     "prettier-check": "prettier --check .",
-    "prettier-write": "prettier --write .",
-    "npm-check-updates": "npm-check-updates",
-    "tsc": "tsc",
-    "tsc-check": "tsc --noEmit"
+    "prettier-fix": "prettier --write .",
+    "publint-check": "publint",
+    "test": "vitest",
+    "tsc-check": "tsc --noEmit",
+    "vitest-check": "vitest run"
   },
   "dependencies": {
-    "@eslint/js": "^9.39.4",
-    "@next/eslint-plugin-next": "^16.2.1",
+    "@eslint-react/eslint-plugin": "^5.26.5",
+    "@eslint/js": "^10.0.1",
+    "@next/eslint-plugin-next": "^16.4.0",
     "eslint-config-prettier": "^10.1.8",
-    "eslint-plugin-jsx-a11y": "^6.10.2",
-    "eslint-plugin-perfectionist": "^5.7.0",
-    "eslint-plugin-react": "^7.37.5",
-    "eslint-plugin-react-hooks": "^7.0.1",
-    "eslint-plugin-security": "^4.0.0",
-    "globals": "^17.4.0",
-    "typescript-eslint": "^8.57.1"
+    "eslint-plugin-jsx-a11y-x": "^0.2.0",
+    "eslint-plugin-perfectionist": "^5.12.1",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-security": "^4.2.0",
+    "globals": "^17.13.0",
+    "typescript-eslint": "^8.71.2"
   },
   "devDependencies": {
-    "@types/eslint-plugin-security": "^3.0.1",
-    "@types/node": "^24.12.0",
-    "eslint": "^9.39.4",
-    "npm-check-updates": "^19.6.5",
-    "npm-run-all": "^4.1.5",
-    "prettier": "^3.8.1",
-    "typescript": "~5.9.3"
+    "@types/node": "^24.19.2",
+    "eslint": "^10.12.0",
+    "npm-run-all2": "^9.0.3",
+    "prettier": "^3.9.10",
+    "publint": "^0.3.25",
+    "typescript": "~6.0.3",
+    "vitest": "^5.0.4"
   },
   "peerDependencies": {
-    "eslint": "^9.39.4"
+    "eslint": "^10.12.0"
+  },
+  "allowScripts": {
+    "fsevents": false
   }
 }

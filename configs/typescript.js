@@ -4,11 +4,9 @@ import typescriptEslint from "typescript-eslint";
 const typescriptConfig = defineConfig(
   {
     extends: [
-      // typescript-eslint has its own tseslint.config() helper, which could be
-      // the cause of this type incompatibility. See
-      // https://github.com/typescript-eslint/typescript-eslint/issues/10856
-
-      typescriptEslint.configs.recommendedTypeChecked,
+      // Requires strictNullChecks (no-unnecessary-condition and
+      // prefer-nullish-coalescing don't work without it)
+      typescriptEslint.configs.strictTypeChecked,
       typescriptEslint.configs.stylisticTypeChecked,
     ],
     languageOptions: {
@@ -25,6 +23,11 @@ const typescriptConfig = defineConfig(
         },
       ],
       "@typescript-eslint/consistent-type-definitions": ["warn", "type"],
+      "@typescript-eslint/no-confusing-void-expression": [
+        "error",
+        // Allow idiomatic event handlers like `(e) => setValue(e.target.value)`
+        { ignoreArrowShorthand: true },
+      ],
       "@typescript-eslint/no-empty-function": "off",
       "@typescript-eslint/no-empty-object-type": "off",
       "@typescript-eslint/no-misused-promises": [
@@ -44,6 +47,20 @@ const typescriptConfig = defineConfig(
         "warn",
         // Ignore string primitives (so `emptyString || "fallback"` works)
         { ignorePrimitives: { string: true } },
+      ],
+      "@typescript-eslint/restrict-template-expressions": [
+        "error",
+        // strictTypeChecked's options, but allowing numbers (e.g.
+        // `${width}px`). Every option is listed because omitted ones default
+        // to allowed.
+        {
+          allowAny: false,
+          allowBoolean: false,
+          allowNever: false,
+          allowNullish: false,
+          allowNumber: true,
+          allowRegExp: false,
+        },
       ],
     },
   },
